@@ -4,7 +4,7 @@ import { Student } from "../interfaces/student";
 
 // Obtener todos los alumnos
 export const findAllStudents = async (): Promise<Student[]> => {
-  const [rows] = await pool.query<RowDataPacket[]>("SELECT * FROM alumnos");
+  const [rows] = await pool.query<RowDataPacket[]>("SELECT * FROM students");
   return rows as Student[];
 };
 
