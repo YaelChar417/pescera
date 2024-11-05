@@ -4,7 +4,7 @@ import dotenvFlow from "dotenv-flow";
 
 //Para poder acceder a las variables del ambiente (.env)
 if (process.env.NODE_ENV !== "production") {
-  dotenvFlowotenvFlow.config();
+  dotenvFlow.config();
 }
 
 const configOptions: ConnectionOptions = {
