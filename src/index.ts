@@ -1,4 +1,4 @@
-import DotenvFlow from "dotenv-flow"; // name export
+import dotenvFlow from "dotenv-flow"; // name export
 import express from "express";
 import studentRouter from "./routes/student";
 import unknownResource from "./middlewares/unknown-resources";
@@ -7,7 +7,9 @@ import testRoutes from "./routes/test";
 import validationError from "./middlewares/validation";
 
 //Para poder acceder a las variables del ambiente (.env)
-DotenvFlow.config();
+if (process.env.NODE_ENV !== "production") {
+  dotenvFlow.config();
+}
 
 const app = express();
 

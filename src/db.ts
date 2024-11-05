@@ -2,7 +2,10 @@ import mysql from "mysql2/promise";
 import { ConnectionOptions } from "mysql2";
 import dotenvFlow from "dotenv-flow";
 
-dotenvFlow.config();
+//Para poder acceder a las variables del ambiente (.env)
+if (process.env.NODE_ENV !== "production") {
+  dotenvFlowotenvFlow.config();
+}
 
 const configOptions: ConnectionOptions = {
   host: process.env.MYSQL_HOST,
