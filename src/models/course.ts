@@ -48,12 +48,12 @@ export const updateCourse = async (
   const { course_name, credits, description, teacher_id } = course;
   await pool.query<ResultSetHeader>(
     `UPDATE courses
-     SET course_name = ?, 
-         credits = ?, 
-         description = ?, 
-         teacher_id = ?, 
-     WHERE id = ?;`,
-    [course_name, credits, description, teacher_id],
+       SET course_name = ?, 
+           credits = ?, 
+           description = ?, 
+           teacher_id = ?
+       WHERE id = ?;`,
+    [course_name, credits, description, teacher_id, id],
   );
 
   return { id, ...course };
@@ -61,6 +61,5 @@ export const updateCourse = async (
 
 export const deleteCourse = async (id: number): Promise<number> => {
   await pool.query<ResultSetHeader>("DELETE FROM courses WHERE id = ?", [id]);
-
   return id;
 };

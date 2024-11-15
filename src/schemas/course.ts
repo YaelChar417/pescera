@@ -14,8 +14,4 @@ export const courseSchema = z.object({
     .max(200, {
       message: "El máximo de la descripcion debe tener maximo 200 caracteres",
     }),
-  teacher_id: z
-    .number()
-    .int()
-    .min(1, { message: "El id del profesor debe ser mayor a 0" }),
 });
