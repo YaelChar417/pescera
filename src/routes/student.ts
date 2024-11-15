@@ -1,4 +1,4 @@
-// routes/usuarios.ts
+// routes/student.ts
 import { Router } from "express";
 import {
   createStudent,

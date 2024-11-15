@@ -1,4 +1,4 @@
-// routes/usuarios.ts
+// routes/curse.ts
 import { Router } from "express";
 import {
   createCourse,
