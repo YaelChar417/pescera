@@ -1,9 +1,8 @@
 import dotenvFlow from "dotenv-flow";
 import express from "express";
-import studentRouter from "./routes/student";
-import courseRouter from "./routes/course";
-import teacherRouter from "./routes/teacher";
-import testRoutes from "./routes/test";
+import temperatureRouter from "./routes/temperature";
+import turbidityRouter from "./routes/turbidity";
+import foodRouter from "./routes/food";
 import unknownResource from "./middlewares/unknown-resource";
 import unknownError from "./middlewares/unknown-error";
 import validationError from "./middlewares/validation-error";
@@ -32,12 +31,9 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas de la api
-app.use("/api/v1/student", studentRouter);
-app.use("/course", courseRouter);
-app.use("/teacher", teacherRouter);
-
-// Rutas de prueba
-app.use("/error", testRoutes);
+app.use("/temperature", temperatureRouter);
+app.use("/turbidity", turbidityRouter);
+app.use("/food", foodRouter);
 
 // WebSocket Connection
 io.on("connection", (socket) => {
