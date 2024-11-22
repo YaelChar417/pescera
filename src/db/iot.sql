@@ -18,28 +18,28 @@ USE `iot`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `comida`
+-- Table structure for table `food`
 --
 
-DROP TABLE IF EXISTS `comida`;
+DROP TABLE IF EXISTS `food`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `comida` (
+CREATE TABLE `food` (
   `id` int NOT NULL AUTO_INCREMENT,
   `motor` int DEFAULT NULL,
   `ultima_comida` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `comida`
+-- Dumping data for table `food`
 --
 
-LOCK TABLES `comida` WRITE;
-/*!40000 ALTER TABLE `comida` DISABLE KEYS */;
-INSERT INTO `comida` VALUES (1,7,'2024-11-22 04:28:24'),(2,28,'2024-11-22 04:28:24'),(3,42,'2024-11-22 04:28:24'),(4,55,'2024-11-22 04:31:54');
-/*!40000 ALTER TABLE `comida` ENABLE KEYS */;
+LOCK TABLES `food` WRITE;
+/*!40000 ALTER TABLE `food` DISABLE KEYS */;
+INSERT INTO `food` VALUES (1,14,'2024-11-22 05:28:36'),(2,28,'2024-11-22 05:28:36'),(3,42,'2024-11-22 05:28:36'),(7,230,NULL);
+/*!40000 ALTER TABLE `food` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `temperature` (
   `id` int NOT NULL AUTO_INCREMENT,
   `temperatura` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,7 @@ CREATE TABLE `turbidity` (
   `id` int NOT NULL AUTO_INCREMENT,
   `turbidez` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -107,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-21 22:44:41
+-- Dump completed on 2024-11-22  1:29:26
