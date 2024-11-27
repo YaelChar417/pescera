@@ -2,7 +2,6 @@ import pool from "../db";
 import { ResultSetHeader, RowDataPacket } from "mysql2/promise";
 import { PaginatedFood, Food } from "../interfaces/food";
 
-// Obtener todos los alumnos
 export const findAllFoods = async (
   limit: number,
   offset: number,

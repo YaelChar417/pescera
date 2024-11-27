@@ -8,7 +8,7 @@ export const getFoods = async (req: Request, res: Response) => {
   try {
     // obtener parametros de paginación con valores por defecto
     const page = parseInt(req.query.page as string) || 1;
-    const limit = parseInt(req.query.limit as string) || 5;
+    const limit = parseInt(req.query.limit as string) || 1000000000;
 
     //calcular offset
     const offset = (page - 1) * limit;
